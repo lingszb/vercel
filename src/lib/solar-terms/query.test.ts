@@ -26,6 +26,12 @@ describe('toSearchParams', () => {
     expect(result.toString()).toBe('season=winter&month=12')
   })
 
+  it('keeps only season when month is cleared', () => {
+    const result = toSearchParams({ season: 'autumn' })
+
+    expect(result.toString()).toBe('season=autumn')
+  })
+
   it('omits empty filters', () => {
     const result = toSearchParams({})
 
