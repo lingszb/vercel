@@ -1,8 +1,10 @@
 export type Season = 'spring' | 'summer' | 'autumn' | 'winter'
 
-export type SolarTermFilters = {
-  season?: Season
-  month?: number
+export type SolarTermImageBrief = {
+  narrative: string
+  visualElements: string[]
+  mood: string
+  palette: string[]
 }
 
 export type SolarTerm = {
@@ -14,6 +16,7 @@ export type SolarTerm = {
   order: number
   approximateDate: string
   summary: string
+  sceneLine: string
   customs: string[]
   pentads: string[]
   poem?: {
@@ -22,4 +25,6 @@ export type SolarTerm = {
     content: string
   }
   healthOrFarming: string[]
+  imageSrc?: string
+  imageBrief: SolarTermImageBrief
 }

@@ -45,4 +45,15 @@ next-env.d.ts
 .claude/worktrees/
 
 # local claude settings
-.claude/settings.local.json
+.claude/
+
+# local tool state
+.baoyu-skills/
+.playwright-mcp/
+.superpowers/
+image/
+solar-scroll-*.png
+solar-terms-click-nav.png
+twenty_four_solar_terms_scroll_spec.md
+
+.vercel

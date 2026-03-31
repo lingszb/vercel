@@ -1,6 +1,10 @@
 import type { SolarTerm } from '@/types/solar-term'
 
-export const solarTerms: SolarTerm[] = [
+function getSolarTermImageSrc(order: number, id: string) {
+  return `/solar-terms/${String(order).padStart(2, '0')}-${id}.png`
+}
+
+const solarTermsBase: SolarTerm[] = [
   {
     id: 'lichun',
     name: '立春',
@@ -10,6 +14,7 @@ export const solarTerms: SolarTerm[] = [
     order: 1,
     approximateDate: '2月3日-5日',
     summary: '立春为春季之始，万物萌动，天地生机由此舒展。',
+    sceneLine: '东风解冻，草芽初醒，溪岸残冰之间已露出新岁的第一笔春色。',
     customs: ['迎春', '咬春'],
     pentads: ['东风解冻', '蛰虫始振', '鱼陟负冰'],
     poem: {
@@ -18,6 +23,12 @@ export const solarTerms: SolarTerm[] = [
       content: '停杯不饮待春来，和气先春动六街。',
     },
     healthOrFarming: ['宜早睡早起，舒展筋骨', '农事上开始备耕备种'],
+    imageBrief: {
+      narrative: '晨光落在仍带薄冰的溪岸，东风推开寒意，草芽初醒，田畴边的人家正备下迎春小席，整幅画面有万物将启的舒展感。',
+      visualElements: ['薄冰溪流', '初生草芽', '东风拂柳', '乡野人家', '迎春器物'],
+      mood: '新岁初启，清润舒展',
+      palette: ['柳芽青', '溪冰白', '晨曦金', '土褐'],
+    },
   },
   {
     id: 'yushui',
@@ -28,6 +39,7 @@ export const solarTerms: SolarTerm[] = [
     order: 2,
     approximateDate: '2月18日-20日',
     summary: '雨水增多，草木渐生，寒气未尽而润意渐浓。',
+    sceneLine: '细雨轻覆河港村桥，归雁掠过低云，春水初涨时万物都带着湿润的亮色。',
     customs: ['回娘家', '拉保保'],
     pentads: ['獭祭鱼', '鸿雁来', '草木萌动'],
     poem: {
@@ -36,6 +48,12 @@ export const solarTerms: SolarTerm[] = [
       content: '好雨知时节，当春乃发生。',
     },
     healthOrFarming: ['注意祛湿保暖', '适合整地与春播准备'],
+    imageBrief: {
+      narrative: '细雨漫过河港与村桥，归雁穿过低云，岸边嫩草泛起湿润的亮色，屋檐下的人正捧着新茶看春水慢慢涨起。',
+      visualElements: ['春雨水面', '归雁低飞', '村桥屋檐', '湿润草木', '茶盏'],
+      mood: '柔润含蓄，春意渐丰',
+      palette: ['烟雨灰', '嫩草绿', '河水青', '米白'],
+    },
   },
   {
     id: 'jingzhe',
@@ -46,6 +64,7 @@ export const solarTerms: SolarTerm[] = [
     order: 3,
     approximateDate: '3月5日-7日',
     summary: '春雷乍动，蛰伏生灵被唤醒，大地气象愈发活跃。',
+    sceneLine: '一声春雷惊开桃萼与湿土，鸟雀虫鸣同时苏醒，天地忽然有了跃动的回声。',
     customs: ['祭白虎', '打小人'],
     pentads: ['桃始华', '仓庚鸣', '鹰化为鸠'],
     poem: {
@@ -54,6 +73,12 @@ export const solarTerms: SolarTerm[] = [
       content: '微雨众卉新，一雷惊蛰始。',
     },
     healthOrFarming: ['饮食宜清淡平和', '注意田间排水与病虫预防'],
+    imageBrief: {
+      narrative: '乌云后传来第一声春雷，桃花在雨后骤然明艳，田埂边的小虫与鸟雀同时活跃起来，空气里带着被惊醒的热闹。',
+      visualElements: ['春雷远云', '初绽桃花', '黄莺鸣枝', '田埂湿土', '惊起小虫'],
+      mood: '惊醒、生动、带有张力',
+      palette: ['桃粉', '雷云青灰', '湿土褐', '嫩叶绿'],
+    },
   },
   {
     id: 'chunfen',
@@ -64,6 +89,7 @@ export const solarTerms: SolarTerm[] = [
     order: 4,
     approximateDate: '3月20日-22日',
     summary: '昼夜均分，寒暑平衡，春色进入匀和明朗之境。',
+    sceneLine: '天光与风色恰到好处地分匀山川原野，春分之景自有一种安静而明朗的平衡。',
     customs: ['立蛋', '踏青'],
     pentads: ['玄鸟至', '雷乃发声', '始电'],
     poem: {
@@ -72,6 +98,12 @@ export const solarTerms: SolarTerm[] = [
       content: '仲春初四日，春色正中分。',
     },
     healthOrFarming: ['作息宜顺应昼夜均衡', '适合播种耐春作物'],
+    imageBrief: {
+      narrative: '明净天空下，远山、原野与溪流都处在均衡柔和的光线里，孩童在草地上试立彩蛋，春风把整片天地吹得匀净明朗。',
+      visualElements: ['均匀天光', '草地立蛋', '远山溪流', '归燕掠空', '踏青人物'],
+      mood: '平衡明净，从容舒阔',
+      palette: ['天青', '嫩黄绿', '蛋壳白', '暖日金'],
+    },
   },
   {
     id: 'qingming',
@@ -82,6 +114,7 @@ export const solarTerms: SolarTerm[] = [
     order: 5,
     approximateDate: '4月4日-6日',
     summary: '清明气清景明，兼具追思与踏青的双重意味。',
+    sceneLine: '薄雨洗净山路与松柏，新柳春草铺开远近原野，清明的景色总在追思与出游之间。',
     customs: ['扫墓祭祖', '踏青插柳'],
     pentads: ['桐始华', '田鼠化为鴽', '虹始见'],
     poem: {
@@ -90,6 +123,12 @@ export const solarTerms: SolarTerm[] = [
       content: '清明时节雨纷纷，路上行人欲断魂。',
     },
     healthOrFarming: ['宜舒缓情绪，踏青养肝', '春耕春管进入忙时'],
+    imageBrief: {
+      narrative: '薄雨中的山路通向松柏掩映的墓地，另一侧原野已经铺开春草与柳色，行人手执纸伞在追思与踏青之间缓慢前行。',
+      visualElements: ['细雨山路', '纸伞行人', '松柏墓园', '新柳春草', '远处虹影'],
+      mood: '清润、克制、含有思念',
+      palette: ['烟青', '柳绿', '石灰白', '淡墨'],
+    },
   },
   {
     id: 'guyu',
@@ -100,6 +139,7 @@ export const solarTerms: SolarTerm[] = [
     order: 6,
     approximateDate: '4月19日-21日',
     summary: '谷雨润泽百谷，暮春之际，农作与生长进入关键阶段。',
+    sceneLine: '丝雨浸润桑树、浮萍与新茶，暮春在一片丰润水气里催动百谷继续生长。',
     customs: ['赏牡丹', '喝谷雨茶'],
     pentads: ['萍始生', '鸣鸠拂其羽', '戴胜降于桑'],
     poem: {
@@ -108,6 +148,12 @@ export const solarTerms: SolarTerm[] = [
       content: '谷雨如丝复似尘，煮瓶浮蜡正尝新。',
     },
     healthOrFarming: ['注意脾胃调养', '适宜播谷种豆'],
+    imageBrief: {
+      narrative: '暮春的细雨洒在桑树、茶席与初生水萍上，田野边已有忙碌播种的人影，牡丹在院落一角盛开，显出春末最丰润的气息。',
+      visualElements: ['丝雨桑树', '新茶茶席', '水面浮萍', '播种农人', '盛开牡丹'],
+      mood: '丰润温厚，生机饱满',
+      palette: ['茶绿', '牡丹粉', '泥土褐', '水雾灰'],
+    },
   },
   {
     id: 'lixia',
@@ -118,6 +164,7 @@ export const solarTerms: SolarTerm[] = [
     order: 7,
     approximateDate: '5月5日-7日',
     summary: '立夏标志夏季开始，阳气渐盛，万物繁茂。',
+    sceneLine: '薰风穿过高柳绿槐，庭院新蝉初鸣，立夏把清朗的热意缓缓铺向人间草木。',
     customs: ['称人', '斗蛋'],
     pentads: ['蝼蝈鸣', '蚯蚓出', '王瓜生'],
     poem: {
@@ -126,6 +173,12 @@ export const solarTerms: SolarTerm[] = [
       content: '绿槐高柳咽新蝉，薰风初入弦。',
     },
     healthOrFarming: ['注意养心安神', '夏熟作物进入管理期'],
+    imageBrief: {
+      narrative: '初夏薰风穿过高柳和绿槐，院中摆着彩蛋与秤杆，枝叶浓荫下隐约传来新蝉声，空气里有热度初起的清朗。',
+      visualElements: ['高柳绿槐', '彩蛋', '秤杆', '初夏庭院', '新蝉鸣枝'],
+      mood: '清亮、舒展、带夏意',
+      palette: ['浓槐绿', '蛋壳彩', '木色褐', '晴空蓝'],
+    },
   },
   {
     id: 'xiaoman',
@@ -136,6 +189,7 @@ export const solarTerms: SolarTerm[] = [
     order: 8,
     approximateDate: '5月20日-22日',
     summary: '麦粒初盈而未满，雨水渐丰，万物带着将熟未熟的张力。',
+    sceneLine: '麦浪鼓起尚未饱满的金绿弧度，苦菜正秀、桑蚕未歇，小满之景尽是含而未发。',
     customs: ['祭车神', '祈蚕'],
     pentads: ['苦菜秀', '靡草死', '麦秋至'],
     poem: {
@@ -144,6 +198,12 @@ export const solarTerms: SolarTerm[] = [
       content: '最爱垄头麦，迎风笑落红。',
     },
     healthOrFarming: ['宜清热祛湿', '关注麦田灌浆和病害'],
+    imageBrief: {
+      narrative: '麦浪在初夏风中鼓起金绿的弧度，田边苦菜正秀，远处蚕簇与农车静候忙时，一切都停留在即将饱满的临界点。',
+      visualElements: ['半熟麦田', '迎风麦浪', '苦菜野地', '农车木轮', '桑蚕器具'],
+      mood: '饱胀、克制、蓄势待发',
+      palette: ['麦青金', '桑叶绿', '车轮褐', '暖灰'],
+    },
   },
   {
     id: 'mangzhong',
@@ -154,6 +214,7 @@ export const solarTerms: SolarTerm[] = [
     order: 9,
     approximateDate: '6月5日-7日',
     summary: '有芒作物成熟，夏种夏收并举，农时最为紧张。',
+    sceneLine: '麦垛与秧田并列在细雨天光下，收与种同在一刻，芒种之景总带着农时催促。',
     customs: ['送花神', '安苗'],
     pentads: ['螳螂生', '鵙始鸣', '反舌无声'],
     poem: {
@@ -162,6 +223,12 @@ export const solarTerms: SolarTerm[] = [
       content: '时雨及芒种，四野皆插秧。',
     },
     healthOrFarming: ['避免贪凉，护脾胃', '抓紧抢收抢种'],
+    imageBrief: {
+      narrative: '一边是收割后的麦垛，一边是正插秧的水田，细雨压低天色，农人弯身劳作，整个场景密集而充满农时催迫感。',
+      visualElements: ['插秧水田', '收割麦垛', '弯身农人', '细雨低云', '田埂农具'],
+      mood: '繁忙紧凑，带雨意张力',
+      palette: ['秧苗绿', '麦穗金', '雨云灰', '湿泥褐'],
+    },
   },
   {
     id: 'xiazhi',
@@ -172,6 +239,7 @@ export const solarTerms: SolarTerm[] = [
     order: 10,
     approximateDate: '6月21日-22日',
     summary: '白昼最长，阳气最盛，盛夏气象正式铺开。',
+    sceneLine: '烈日把池水、树影与庭院一同照亮，夏至的画面正停在白昼最盛的那一刻。',
     customs: ['祭神祀祖', '吃夏至面'],
     pentads: ['鹿角解', '蜩始鸣', '半夏生'],
     poem: {
@@ -180,6 +248,12 @@ export const solarTerms: SolarTerm[] = [
       content: '昼晷已云极，宵漏自此长。',
     },
     healthOrFarming: ['宜清心养神', '加强田间灌溉与除草'],
+    imageBrief: {
+      narrative: '烈日将庭院与池水照得发亮，树荫被压得极短，案上摆着夏至面，蝉声遍布四周，画面要有白昼达到极盛时的明灼感。',
+      visualElements: ['高照夏日', '明亮池水', '短影庭院', '夏至面', '盛夏蝉鸣'],
+      mood: '明灼鼎盛，带安静热度',
+      palette: ['烈日白金', '荷池青', '浓荫绿', '面食米白'],
+    },
   },
   {
     id: 'xiaoshu',
@@ -190,6 +264,7 @@ export const solarTerms: SolarTerm[] = [
     order: 11,
     approximateDate: '7月6日-8日',
     summary: '暑热渐起而未极，天地蒸腾，草木葱茏。',
+    sceneLine: '温风吹动柳荫、竹席与桥畔帘影，小暑的景色已经蒸腾，却仍留着一丝可亲的清凉。',
     customs: ['食新', '晒伏'],
     pentads: ['温风至', '蟋蟀居宇', '鹰始鸷'],
     poem: {
@@ -198,6 +273,12 @@ export const solarTerms: SolarTerm[] = [
       content: '携扙来追柳外凉，画桥南畔倚胡床。',
     },
     healthOrFarming: ['宜补水解暑', '关注高温和暴雨天气'],
+    imageBrief: {
+      narrative: '温风吹动柳荫与廊下竹席，人们在桥边纳凉尝新，空气中有蒸腾暑气却仍留一丝阴凉，呈现盛夏前奏的丰盛。',
+      visualElements: ['柳荫竹席', '拱桥纳凉', '新谷食器', '温风帘影', '浓绿庭院'],
+      mood: '蒸腾而不燥，闲适丰茂',
+      palette: ['深柳绿', '竹席黄', '桥石灰', '风热金'],
+    },
   },
   {
     id: 'dashu',
@@ -208,6 +289,7 @@ export const solarTerms: SolarTerm[] = [
     order: 12,
     approximateDate: '7月22日-24日',
     summary: '大暑是一年中暑热最盛时段，亦是生命力最张扬的时期。',
+    sceneLine: '暑气翻涌在庭院与田野之间，流萤、伏茶与厚云并起，大暑把一年热力推向顶点。',
     customs: ['饮伏茶', '烧伏香'],
     pentads: ['腐草为萤', '土润溽暑', '大雨时行'],
     poem: {
@@ -216,6 +298,12 @@ export const solarTerms: SolarTerm[] = [
       content: '何以销烦暑，端居一院中。',
     },
     healthOrFarming: ['防暑祛湿并重', '加强作物防涝与防病'],
+    imageBrief: {
+      narrative: '暑气在院落与田野上翻涌，伏茶、香烟与暴雨将至的湿热空气交织，暗处飞起点点流萤，画面要呈现一年热力最浓时的饱和感。',
+      visualElements: ['伏茶茶壶', '暑热庭院', '流萤微光', '厚重云层', '湿润土气'],
+      mood: '炽热浓密，生命力外放',
+      palette: ['焦阳金', '湿土褐', '浓云蓝灰', '流萤绿'],
+    },
   },
   {
     id: 'liqiu',
@@ -226,6 +314,7 @@ export const solarTerms: SolarTerm[] = [
     order: 13,
     approximateDate: '8月7日-9日',
     summary: '立秋是秋季起点，暑气未尽而凉意初萌。',
+    sceneLine: '瓜果余香未散，窗边先有凉风透入，立秋之景总在盛夏与新秋交接的细微处。',
     customs: ['啃秋', '贴秋膘'],
     pentads: ['凉风至', '白露降', '寒蝉鸣'],
     poem: {
@@ -234,6 +323,12 @@ export const solarTerms: SolarTerm[] = [
       content: '乳鸦啼散玉屏空，一枕新凉一扇风。',
     },
     healthOrFarming: ['宜润燥养肺', '准备秋收与田间后期管理'],
+    imageBrief: {
+      narrative: '午后的瓜果席还留着夏意，窗边已吹来第一缕凉风，蝉声开始显出清薄，院落中有季节转折刚刚发生的微妙变化。',
+      visualElements: ['瓜果秋席', '庭院凉风', '轻薄纱帘', '枝头寒蝉', '初秋树影'],
+      mood: '由热转凉，轻微清新',
+      palette: ['瓜瓤红', '初秋青绿', '凉风灰蓝', '木席褐'],
+    },
   },
   {
     id: 'chushu',
@@ -244,6 +339,7 @@ export const solarTerms: SolarTerm[] = [
     order: 14,
     approximateDate: '8月22日-24日',
     summary: '处暑意为暑热退隐，天地由盛夏逐渐转入清秋。',
+    sceneLine: '江面开渔、稻穗低垂，盛夏黏重慢慢退场，处暑把天地洗向更高更清的秋空。',
     customs: ['开渔节', '拜土地'],
     pentads: ['鹰乃祭鸟', '天地始肃', '禾乃登'],
     poem: {
@@ -252,6 +348,12 @@ export const solarTerms: SolarTerm[] = [
       content: '处暑无三日，新凉直万金。',
     },
     healthOrFarming: ['注意润燥与作息调整', '稻谷等作物进入成熟期'],
+    imageBrief: {
+      narrative: '江面开渔，船帆映着渐清的天色，岸边稻禾开始低垂，盛夏的黏重感退去，画面里有一层被新凉洗开的清爽。',
+      visualElements: ['江面渔船', '开渔旗帆', '成熟稻穗', '高远秋空', '岸边人物'],
+      mood: '清朗、松弛、秋意初定',
+      palette: ['江水蓝', '稻穗金', '天光白', '渔舟褐'],
+    },
   },
   {
     id: 'bailu',
@@ -262,6 +364,7 @@ export const solarTerms: SolarTerm[] = [
     order: 15,
     approximateDate: '9月7日-9日',
     summary: '白露见凉，露珠渐凝，秋意由清爽转向清寒。',
+    sceneLine: '草叶与芦苇凝起圆润白露，鸿雁南来掠过晨空，白露之景清凉而带微微乡思。',
     customs: ['收清露', '饮白露茶'],
     pentads: ['鸿雁来', '玄鸟归', '群鸟养羞'],
     poem: {
@@ -270,6 +373,12 @@ export const solarTerms: SolarTerm[] = [
       content: '露从今夜白，月是故乡明。',
     },
     healthOrFarming: ['早晚注意添衣', '适宜采收与晾晒谷物'],
+    imageBrief: {
+      narrative: '清晨月色未尽，草叶与芦苇上凝着圆润白露，鸿雁正从高空南来，人物在庭前收露，氛围安静而带一点乡愁。',
+      visualElements: ['白露草叶', '芦苇水岸', '高空鸿雁', '残月晨光', '收露器皿'],
+      mood: '清凉静谧，微带思念',
+      palette: ['露珠白', '芦苇灰绿', '晨空淡蓝', '月光银'],
+    },
   },
   {
     id: 'qiufen',
@@ -280,6 +389,7 @@ export const solarTerms: SolarTerm[] = [
     order: 16,
     approximateDate: '9月22日-24日',
     summary: '秋分昼夜均分，秋色平衡，田野进入丰收图景。',
+    sceneLine: '晚霞横过丰收田野与浅水泽地，秋分的景色在明暗冷暖之间稳稳地保持均衡。',
     customs: ['祭月', '吃秋菜'],
     pentads: ['雷始收声', '蛰虫坯户', '水始涸'],
     poem: {
@@ -288,6 +398,12 @@ export const solarTerms: SolarTerm[] = [
       content: '返照斜初彻，浮云薄未归。',
     },
     healthOrFarming: ['宜收敛养肺，防秋燥', '秋收秋种两头忙'],
+    imageBrief: {
+      narrative: '晚霞横过已然丰收的田野，水泽渐浅，菜蔬与新谷摆上桌案，天地在明暗与冷暖之间保持一种恰到好处的平衡。',
+      visualElements: ['丰收田野', '秋菜桌案', '返照斜阳', '浅水泽地', '远处村舍'],
+      mood: '平衡丰实，明朗温厚',
+      palette: ['谷金', '晚霞橙', '秋菜绿', '泥岸褐'],
+    },
   },
   {
     id: 'hanlu',
@@ -298,6 +414,7 @@ export const solarTerms: SolarTerm[] = [
     order: 17,
     approximateDate: '10月8日-9日',
     summary: '露气更寒，草木渐衰，深秋景致愈发清峻。',
+    sceneLine: '红叶沿山径燃起深秋层次，黄菊临阶而开，寒露的风景清峻里自带锋利的明艳。',
     customs: ['登高', '赏菊'],
     pentads: ['鸿雁来宾', '雀入大水为蛤', '菊有黄华'],
     poem: {
@@ -306,6 +423,12 @@ export const solarTerms: SolarTerm[] = [
       content: '停车坐爱枫林晚，霜叶红于二月花。',
     },
     healthOrFarming: ['宜温润防寒', '注意晚秋作物采收'],
+    imageBrief: {
+      narrative: '登高所见的山路上红叶正盛，黄菊在石阶边开得清寒，空气中寒露凝重，景物呈现出深秋特有的峻朗与鲜明。',
+      visualElements: ['登高山径', '红枫霜叶', '黄菊石阶', '高远天色', '远飞鸿雁'],
+      mood: '清峻、鲜明、略带寒意',
+      palette: ['枫叶红', '菊花黄', '寒露白', '山石灰'],
+    },
   },
   {
     id: 'shuangjiang',
@@ -316,6 +439,7 @@ export const solarTerms: SolarTerm[] = [
     order: 18,
     approximateDate: '10月23日-24日',
     summary: '霜降为秋季最后一个节气，寒意逼近，冬的门槛已近。',
+    sceneLine: '霜色落满熟柿与枯草，冷光压低山坡红叶，霜降的画面已有季节将尽的收束感。',
     customs: ['吃柿子', '赏红叶'],
     pentads: ['豺乃祭兽', '草木黄落', '蛰虫咸俯'],
     poem: {
@@ -324,6 +448,12 @@ export const solarTerms: SolarTerm[] = [
       content: '春风又绿江南岸，明月何时照我还。',
     },
     healthOrFarming: ['注意保暖与润燥', '收尾晚秋农事'],
+    imageBrief: {
+      narrative: '清晨霜色落满柿树与枯草，红叶在冷光里尤为浓烈，村舍前已经开始收束农事，整个画面有季节将封笔的意味。',
+      visualElements: ['霜白地面', '熟柿树', '红叶山坡', '收束农具', '清冷晨光'],
+      mood: '清冷收束，带岁末前感',
+      palette: ['霜白', '柿橙', '枯草黄', '深红'],
+    },
   },
   {
     id: 'lidong',
@@ -334,6 +464,7 @@ export const solarTerms: SolarTerm[] = [
     order: 19,
     approximateDate: '11月7日-8日',
     summary: '立冬标志冬季开始，天地闭藏，万物收藏。',
+    sceneLine: '枯荷、薄冰与北风一起落在水岸，立冬之景像轻轻合上的一扇门，把万物收入冬藏。',
     customs: ['补冬', '吃饺子'],
     pentads: ['水始冰', '地始冻', '雉入大水为蜃'],
     poem: {
@@ -342,6 +473,12 @@ export const solarTerms: SolarTerm[] = [
       content: '落水荷塘满眼枯，西风渐作北风呼。',
     },
     healthOrFarming: ['宜早睡晚起，温补藏阳', '农田进入冬藏整备期'],
+    imageBrief: {
+      narrative: '荷塘已枯，浅水开始结出薄冰，屋内热气蒸腾的饺子与补冬食材形成对照，冬天像一扇门刚刚被轻轻合上。',
+      visualElements: ['枯荷寒塘', '薄冰水面', '热气饺子', '北风窗棂', '冬藏器具'],
+      mood: '闭藏安稳，初冬清寒',
+      palette: ['冰灰', '枯荷褐', '室内暖米', '深墨蓝'],
+    },
   },
   {
     id: 'xiaoxue',
@@ -352,6 +489,7 @@ export const solarTerms: SolarTerm[] = [
     order: 20,
     approximateDate: '11月22日-23日',
     summary: '天气更寒而雪量未盛，冬意愈加明显。',
+    sceneLine: '细雪轻落屋檐与院落竹竿，小雪的风景寒意渐深，却仍留着鲜明的人间烟火。',
     customs: ['腌腊肉', '晒鱼干'],
     pentads: ['虹藏不见', '天气上升地气下降', '闭塞成冬'],
     poem: {
@@ -360,6 +498,12 @@ export const solarTerms: SolarTerm[] = [
       content: '花雪随风不厌看，一片飞来一片寒。',
     },
     healthOrFarming: ['注意防寒润燥', '储藏冬季食材与农产'],
+    imageBrief: {
+      narrative: '细雪在灰白天色中飘下，院中挂着腊肉与鱼干，屋檐与竹竿上积起浅浅白意，冬日生活的烟火感在寒气里更清楚。',
+      visualElements: ['初雪飞片', '腊肉竹竿', '晒鱼院落', '灰白天色', '檐下积雪'],
+      mood: '清寒而有人间烟火',
+      palette: ['雪白', '腊肉赭红', '天空灰', '竹竿青褐'],
+    },
   },
   {
     id: 'daxue',
@@ -370,6 +514,7 @@ export const solarTerms: SolarTerm[] = [
     order: 21,
     approximateDate: '12月6日-8日',
     summary: '大雪时节寒气更盛，山川清肃，雪景渐成常态。',
+    sceneLine: '山川江岸都被大雪压成清绝静色，唯有炉火与粥气在寒意深处亮起一点人间温度。',
     customs: ['腌肉', '喝红薯粥'],
     pentads: ['鹖鴠不鸣', '虎始交', '荔挺出'],
     poem: {
@@ -378,6 +523,12 @@ export const solarTerms: SolarTerm[] = [
       content: '孤舟蓑笠翁，独钓寒江雪。',
     },
     healthOrFarming: ['宜温阳御寒', '注意牲畜与冬储管理'],
+    imageBrief: {
+      narrative: '大雪覆盖山川与江岸，远处一叶小舟在寒江独立，近处灶上煮着红薯粥，室外清绝与室内温热形成鲜明对照。',
+      visualElements: ['寒江孤舟', '满山积雪', '蓑笠渔翁', '红薯粥蒸汽', '雪覆村舍'],
+      mood: '清绝静穆，内里温暖',
+      palette: ['雪白', '江水墨蓝', '炉火橙', '蓑衣褐'],
+    },
   },
   {
     id: 'dongzhi',
@@ -388,6 +539,7 @@ export const solarTerms: SolarTerm[] = [
     order: 22,
     approximateDate: '12月21日-23日',
     summary: '冬至昼最短夜最长，阳气自此萌生，是冬季的重要转折。',
+    sceneLine: '最长冬夜里的灯火、祭案与汤圆蒸汽，让冬至之景在深寒之中先透出一线回升的暖意。',
     customs: ['祭祖', '吃饺子或汤圆'],
     pentads: ['蚯蚓结', '麋角解', '水泉动'],
     poem: {
@@ -396,6 +548,12 @@ export const solarTerms: SolarTerm[] = [
       content: '天时人事日相催，冬至阳生春又来。',
     },
     healthOrFarming: ['宜温补养藏', '适合总结农事并准备来年'],
+    imageBrief: {
+      narrative: '最长的冬夜里，室内灯火照着祭祖案与热腾腾的汤圆，窗外寒气深沉，却有一线新阳般的温光从画面深处透出。',
+      visualElements: ['冬夜灯火', '祭祖案几', '汤圆蒸汽', '窗外寒枝', '微暖晨光'],
+      mood: '肃静温厚，暗含回升',
+      palette: ['灯火金', '夜蓝', '汤圆白', '木色深褐'],
+    },
   },
   {
     id: 'xiaohan',
@@ -406,6 +564,7 @@ export const solarTerms: SolarTerm[] = [
     order: 23,
     approximateDate: '1月5日-7日',
     summary: '小寒已入深冬，寒气渐重，却尚未达到极点。',
+    sceneLine: '寒梅先开在溪桥与薄雾之间，小寒的景色冷得分明，却已暗藏来春最早的消息。',
     customs: ['吃腊八粥', '探梅'],
     pentads: ['雁北乡', '鹊始巢', '雉始鸲'],
     poem: {
@@ -414,6 +573,12 @@ export const solarTerms: SolarTerm[] = [
       content: '一树寒梅白玉条，迥临村路傍溪桥。',
     },
     healthOrFarming: ['注意防寒保暖', '适宜整理种子和农具'],
+    imageBrief: {
+      narrative: '溪桥边的寒梅率先开出白色花朵，村舍里正煮腊八粥，空气寒冽却被梅香轻轻划开，显出深冬中最早的一点生机。',
+      visualElements: ['寒梅溪桥', '白色梅花', '腊八粥锅', '冬村小路', '寒晨薄雾'],
+      mood: '寒冽中带清香与希望',
+      palette: ['梅花白', '溪水青灰', '粥暖米黄', '冬枝褐'],
+    },
   },
   {
     id: 'dahan',
@@ -424,6 +589,7 @@ export const solarTerms: SolarTerm[] = [
     order: 24,
     approximateDate: '1月20日-21日',
     summary: '大寒为岁寒之极，旧岁将尽，新春将临。',
+    sceneLine: '残雪未消、炉火已暖，年货与红绳在岁寒深处点亮了大寒将尽、新春将临的门槛。',
     customs: ['除尘', '备年货'],
     pentads: ['鸡乳', '征鸟厉疾', '水泽腹坚'],
     poem: {
@@ -432,8 +598,19 @@ export const solarTerms: SolarTerm[] = [
       content: '大寒雪未消，闭户不能出。',
     },
     healthOrFarming: ['宜温补护肾', '农事上以休养与筹备为主'],
+    imageBrief: {
+      narrative: '积雪未消的院落里，人们正在除尘、张罗年货，寒气达到一年最深处，但门内已透出新岁的红色与将近的热闹。',
+      visualElements: ['残雪院落', '除尘扫帚', '年货红绳', '闭门炉火', '寒枝高空'],
+      mood: '岁寒极处，转向新春',
+      palette: ['雪灰白', '年节红', '炉火橙', '深冬蓝'],
+    },
   },
 ]
+
+export const solarTerms: SolarTerm[] = solarTermsBase.map((item) => ({
+  ...item,
+  imageSrc: getSolarTermImageSrc(item.order, item.id),
+}))
 
 export const seasonOptions = [
   { label: '春', value: 'spring' },
