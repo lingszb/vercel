@@ -14,7 +14,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 1,
     approximateDate: '2月3日-5日',
     summary: '立春为春季之始，万物萌动，天地生机由此舒展。',
-    sceneLine: '东风解冻，草芽初醒，溪岸残冰之间已露出新岁的第一笔春色。',
+    sceneLine: '此时可观立春之景，东风初解，草木轻舒。',
     customs: ['迎春', '咬春'],
     pentads: ['东风解冻', '蛰虫始振', '鱼陟负冰'],
     poem: {
@@ -39,7 +39,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 2,
     approximateDate: '2月18日-20日',
     summary: '雨水增多，草木渐生，寒气未尽而润意渐浓。',
-    sceneLine: '细雨轻覆河港村桥，归雁掠过低云，春水初涨时万物都带着湿润的亮色。',
+    sceneLine: '此时可观雨水之景，轻雨润野，春水初生。',
     customs: ['回娘家', '拉保保'],
     pentads: ['獭祭鱼', '鸿雁来', '草木萌动'],
     poem: {
@@ -64,7 +64,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 3,
     approximateDate: '3月5日-7日',
     summary: '春雷乍动，蛰伏生灵被唤醒，大地气象愈发活跃。',
-    sceneLine: '一声春雷惊开桃萼与湿土，鸟雀虫鸣同时苏醒，天地忽然有了跃动的回声。',
+    sceneLine: '此时可观惊蛰之景，春雷动地，百虫始苏。',
     customs: ['祭白虎', '打小人'],
     pentads: ['桃始华', '仓庚鸣', '鹰化为鸠'],
     poem: {
@@ -89,7 +89,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 4,
     approximateDate: '3月20日-22日',
     summary: '昼夜均分，寒暑平衡，春色进入匀和明朗之境。',
-    sceneLine: '天光与风色恰到好处地分匀山川原野，春分之景自有一种安静而明朗的平衡。',
+    sceneLine: '此时可观春分之景，昼夜平衡，风光匀明。',
     customs: ['立蛋', '踏青'],
     pentads: ['玄鸟至', '雷乃发声', '始电'],
     poem: {
@@ -114,7 +114,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 5,
     approximateDate: '4月4日-6日',
     summary: '清明气清景明，兼具追思与踏青的双重意味。',
-    sceneLine: '薄雨洗净山路与松柏，新柳春草铺开远近原野，清明的景色总在追思与出游之间。',
+    sceneLine: '此时可观清明之景，柳新雨细，山川澄明。',
     customs: ['扫墓祭祖', '踏青插柳'],
     pentads: ['桐始华', '田鼠化为鴽', '虹始见'],
     poem: {
@@ -139,7 +139,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 6,
     approximateDate: '4月19日-21日',
     summary: '谷雨润泽百谷，暮春之际，农作与生长进入关键阶段。',
-    sceneLine: '丝雨浸润桑树、浮萍与新茶，暮春在一片丰润水气里催动百谷继续生长。',
+    sceneLine: '此时可观谷雨之景，雨生百谷，水润新茶。',
     customs: ['赏牡丹', '喝谷雨茶'],
     pentads: ['萍始生', '鸣鸠拂其羽', '戴胜降于桑'],
     poem: {
@@ -164,7 +164,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 7,
     approximateDate: '5月5日-7日',
     summary: '立夏标志夏季开始，阳气渐盛，万物繁茂。',
-    sceneLine: '薰风穿过高柳绿槐，庭院新蝉初鸣，立夏把清朗的热意缓缓铺向人间草木。',
+    sceneLine: '此时可观立夏之景，薰风入林，万物并秀。',
     customs: ['称人', '斗蛋'],
     pentads: ['蝼蝈鸣', '蚯蚓出', '王瓜生'],
     poem: {
@@ -189,7 +189,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 8,
     approximateDate: '5月20日-22日',
     summary: '麦粒初盈而未满，雨水渐丰，万物带着将熟未熟的张力。',
-    sceneLine: '麦浪鼓起尚未饱满的金绿弧度，苦菜正秀、桑蚕未歇，小满之景尽是含而未发。',
+    sceneLine: '此时可观小满之景，麦粒渐盈，夏意初丰。',
     customs: ['祭车神', '祈蚕'],
     pentads: ['苦菜秀', '靡草死', '麦秋至'],
     poem: {
@@ -214,7 +214,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 9,
     approximateDate: '6月5日-7日',
     summary: '有芒作物成熟，夏种夏收并举，农时最为紧张。',
-    sceneLine: '麦垛与秧田并列在细雨天光下，收与种同在一刻，芒种之景总带着农时催促。',
+    sceneLine: '此时可观芒种之景，麦熟秧新，农时正忙。',
     customs: ['送花神', '安苗'],
     pentads: ['螳螂生', '鵙始鸣', '反舌无声'],
     poem: {
@@ -239,7 +239,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 10,
     approximateDate: '6月21日-22日',
     summary: '白昼最长，阳气最盛，盛夏气象正式铺开。',
-    sceneLine: '烈日把池水、树影与庭院一同照亮，夏至的画面正停在白昼最盛的那一刻。',
+    sceneLine: '此时可观夏至之景，日长影短，盛阳在天。',
     customs: ['祭神祀祖', '吃夏至面'],
     pentads: ['鹿角解', '蜩始鸣', '半夏生'],
     poem: {
@@ -264,7 +264,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 11,
     approximateDate: '7月6日-8日',
     summary: '暑热渐起而未极，天地蒸腾，草木葱茏。',
-    sceneLine: '温风吹动柳荫、竹席与桥畔帘影，小暑的景色已经蒸腾，却仍留着一丝可亲的清凉。',
+    sceneLine: '此时可观小暑之景，温风过庭，暑气初蒸。',
     customs: ['食新', '晒伏'],
     pentads: ['温风至', '蟋蟀居宇', '鹰始鸷'],
     poem: {
@@ -289,7 +289,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 12,
     approximateDate: '7月22日-24日',
     summary: '大暑是一年中暑热最盛时段，亦是生命力最张扬的时期。',
-    sceneLine: '暑气翻涌在庭院与田野之间，流萤、伏茶与厚云并起，大暑把一年热力推向顶点。',
+    sceneLine: '此时可观大暑之景，湿热蒸腾，炎光满野。',
     customs: ['饮伏茶', '烧伏香'],
     pentads: ['腐草为萤', '土润溽暑', '大雨时行'],
     poem: {
@@ -314,7 +314,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 13,
     approximateDate: '8月7日-9日',
     summary: '立秋是秋季起点，暑气未尽而凉意初萌。',
-    sceneLine: '瓜果余香未散，窗边先有凉风透入，立秋之景总在盛夏与新秋交接的细微处。',
+    sceneLine: '此时可观立秋之景，凉风初至，暑尽闻秋。',
     customs: ['啃秋', '贴秋膘'],
     pentads: ['凉风至', '白露降', '寒蝉鸣'],
     poem: {
@@ -339,7 +339,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 14,
     approximateDate: '8月22日-24日',
     summary: '处暑意为暑热退隐，天地由盛夏逐渐转入清秋。',
-    sceneLine: '江面开渔、稻穗低垂，盛夏黏重慢慢退场，处暑把天地洗向更高更清的秋空。',
+    sceneLine: '此时可观处暑之景，暑退云清，禾气渐熟。',
     customs: ['开渔节', '拜土地'],
     pentads: ['鹰乃祭鸟', '天地始肃', '禾乃登'],
     poem: {
@@ -364,7 +364,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 15,
     approximateDate: '9月7日-9日',
     summary: '白露见凉，露珠渐凝，秋意由清爽转向清寒。',
-    sceneLine: '草叶与芦苇凝起圆润白露，鸿雁南来掠过晨空，白露之景清凉而带微微乡思。',
+    sceneLine: '此时可观白露之景，露凝秋草，鸿雁南来。',
     customs: ['收清露', '饮白露茶'],
     pentads: ['鸿雁来', '玄鸟归', '群鸟养羞'],
     poem: {
@@ -389,7 +389,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 16,
     approximateDate: '9月22日-24日',
     summary: '秋分昼夜均分，秋色平衡，田野进入丰收图景。',
-    sceneLine: '晚霞横过丰收田野与浅水泽地，秋分的景色在明暗冷暖之间稳稳地保持均衡。',
+    sceneLine: '此时可观秋分之景，昼夜平分，田野澄朗。',
     customs: ['祭月', '吃秋菜'],
     pentads: ['雷始收声', '蛰虫坯户', '水始涸'],
     poem: {
@@ -414,7 +414,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 17,
     approximateDate: '10月8日-9日',
     summary: '露气更寒，草木渐衰，深秋景致愈发清峻。',
-    sceneLine: '红叶沿山径燃起深秋层次，黄菊临阶而开，寒露的风景清峻里自带锋利的明艳。',
+    sceneLine: '此时可观寒露之景，露寒风肃，菊染深秋。',
     customs: ['登高', '赏菊'],
     pentads: ['鸿雁来宾', '雀入大水为蛤', '菊有黄华'],
     poem: {
@@ -439,7 +439,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 18,
     approximateDate: '10月23日-24日',
     summary: '霜降为秋季最后一个节气，寒意逼近，冬的门槛已近。',
-    sceneLine: '霜色落满熟柿与枯草，冷光压低山坡红叶，霜降的画面已有季节将尽的收束感。',
+    sceneLine: '此时可观霜降之景，霜染草木，秋声将尽。',
     customs: ['吃柿子', '赏红叶'],
     pentads: ['豺乃祭兽', '草木黄落', '蛰虫咸俯'],
     poem: {
@@ -464,7 +464,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 19,
     approximateDate: '11月7日-8日',
     summary: '立冬标志冬季开始，天地闭藏，万物收藏。',
-    sceneLine: '枯荷、薄冰与北风一起落在水岸，立冬之景像轻轻合上的一扇门，把万物收入冬藏。',
+    sceneLine: '此时可观立冬之景，风入草木，物随节令徐徐开卷。',
     customs: ['补冬', '吃饺子'],
     pentads: ['水始冰', '地始冻', '雉入大水为蜃'],
     poem: {
@@ -489,7 +489,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 20,
     approximateDate: '11月22日-23日',
     summary: '天气更寒而雪量未盛，冬意愈加明显。',
-    sceneLine: '细雪轻落屋檐与院落竹竿，小雪的风景寒意渐深，却仍留着鲜明的人间烟火。',
+    sceneLine: '此时可观小雪之景，初雪轻落，寒意渐深。',
     customs: ['腌腊肉', '晒鱼干'],
     pentads: ['虹藏不见', '天气上升地气下降', '闭塞成冬'],
     poem: {
@@ -514,7 +514,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 21,
     approximateDate: '12月6日-8日',
     summary: '大雪时节寒气更盛，山川清肃，雪景渐成常态。',
-    sceneLine: '山川江岸都被大雪压成清绝静色，唯有炉火与粥气在寒意深处亮起一点人间温度。',
+    sceneLine: '此时可观大雪之景，山河积素，寒野愈静。',
     customs: ['腌肉', '喝红薯粥'],
     pentads: ['鹖鴠不鸣', '虎始交', '荔挺出'],
     poem: {
@@ -539,7 +539,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 22,
     approximateDate: '12月21日-23日',
     summary: '冬至昼最短夜最长，阳气自此萌生，是冬季的重要转折。',
-    sceneLine: '最长冬夜里的灯火、祭案与汤圆蒸汽，让冬至之景在深寒之中先透出一线回升的暖意。',
+    sceneLine: '此时可观冬至之景，长夜藏阳，灯火生温。',
     customs: ['祭祖', '吃饺子或汤圆'],
     pentads: ['蚯蚓结', '麋角解', '水泉动'],
     poem: {
@@ -564,7 +564,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 23,
     approximateDate: '1月5日-7日',
     summary: '小寒已入深冬，寒气渐重，却尚未达到极点。',
-    sceneLine: '寒梅先开在溪桥与薄雾之间，小寒的景色冷得分明，却已暗藏来春最早的消息。',
+    sceneLine: '此时可观小寒之景，寒梅破雪，晨气清冽。',
     customs: ['吃腊八粥', '探梅'],
     pentads: ['雁北乡', '鹊始巢', '雉始鸲'],
     poem: {
@@ -589,7 +589,7 @@ const solarTermsBase: SolarTerm[] = [
     order: 24,
     approximateDate: '1月20日-21日',
     summary: '大寒为岁寒之极，旧岁将尽，新春将临。',
-    sceneLine: '残雪未消、炉火已暖，年货与红绳在岁寒深处点亮了大寒将尽、新春将临的门槛。',
+    sceneLine: '此时可观大寒之景，岁寒最深，春信将回。',
     customs: ['除尘', '备年货'],
     pentads: ['鸡乳', '征鸟厉疾', '水泽腹坚'],
     poem: {

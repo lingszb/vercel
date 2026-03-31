@@ -12,9 +12,9 @@ export function SolarTermPanel({ item, className = '', ...props }: SolarTermPane
     <article
       {...props}
       id={getSolarTermAnchorId(item.id)}
-      className={`${className} solar-term-panel shrink-0 snap-center px-2 py-5 md:min-h-[72vh] md:w-[82vw] md:max-w-[1180px] md:px-3 md:py-6`.trim()}
+      className={`${className} solar-term-panel shrink-0 snap-center px-2 py-5 md:min-h-[64vh] md:w-[76vw] md:max-w-[1040px] md:px-2 md:py-4`.trim()}
     >
-      <div className="solar-term-panel__sheet grid h-full gap-6 rounded-[2.2rem] border border-[color:var(--line-strong)] p-4 md:grid-cols-[minmax(0,1.18fr)_minmax(280px,0.78fr)] md:gap-8 md:p-7">
+      <div className="solar-term-panel__sheet grid h-full gap-6 rounded-[2.2rem] border border-[color:var(--line-strong)] p-4 md:grid-cols-[minmax(0,1.18fr)_minmax(280px,0.78fr)] md:gap-6 md:p-6">
         <section className="space-y-4">
           <div className="flex items-center justify-between gap-4 text-[color:var(--muted)]">
             <p className="text-[11px] tracking-[0.38em]">岁时画境</p>
@@ -22,11 +22,11 @@ export function SolarTermPanel({ item, className = '', ...props }: SolarTermPane
           </div>
 
           <div className="solar-term-panel__painting rounded-[1.9rem] border border-[color:var(--line)] p-4 md:p-6">
-            <div className="flex h-full min-h-[21rem] flex-col justify-between gap-6 md:min-h-[32rem]">
+            <div className="flex h-full min-h-[21rem] flex-col justify-between gap-5 md:min-h-[26rem]">
               <div className="space-y-3">
                 <div className="space-y-2.5">
                   <p className="text-sm tracking-[0.2em] text-[color:var(--muted)]">{item.month}月画境</p>
-                  <p className="text-xl leading-relaxed tracking-[0.1em] md:text-[2rem]">
+                  <p className="text-lg leading-relaxed tracking-[0.08em] md:text-[1.65rem]">
                     {item.sceneLine}
                   </p>
                 </div>
